@@ -8,9 +8,9 @@ import './styles/id_find.css';
 function App() {
   const [tabName, setTabName] = useState('email');
 
-  const name = useInput('');
-  const email = useInput('');
-  const phoneNumber = useInput('');
+  const { value: name, onChange: onChangeName } = useInput('');
+  const { value: email, onChange: onChangeEmail } = useInput('');
+  const { value: phoneNumber, onChange: onChangePhoneNumber } = useInput('');
 
   const userInfo = [
     { name: '김태현', email: 'th@naver.com', phone: '01011111111', userId: 'NIHILncunia' },
@@ -56,19 +56,38 @@ function App() {
       <form onSubmit={onSubmitForm}>
         <div className='input-block'>
           <label htmlFor="user-name">이름</label>
-          <Input type='text' name='name' {...name} />
+          <Input
+            type='text'
+            name='name'
+            id='user-name'
+            value={name}
+            onChange={onChangeName}
+          />
         </div>
         <div className='input-block'>
           {tabName === 'email' && (
             <>
               <label htmlFor="user-email">이메일</label>
-              <Input type='email' name='email' {...email} />
+              <Input
+                type='email'
+                name='email'
+                id='user-email'
+                value={email}
+                onChange={onChangeEmail}
+              />
             </>
           )}
           {tabName === 'phone' && (
             <>
               <label htmlFor="user-phone-number">휴대폰 번호</label>
-              <Input type='text' name='phone-number' placeholder='- 빼고 입력' {...phoneNumber} />
+              <Input
+                type='text'
+                name='phone-number'
+                id='user-phone-number'
+                holder='- 빼고 입력'
+                value={phoneNumber}
+                onChange={onChangePhoneNumber}
+              />
             </>
           )}
         </div>
