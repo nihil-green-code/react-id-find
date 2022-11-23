@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/global.css">
+  <link rel="stylesheet" href="../styles/layout.css">
+  <link rel="stylesheet" href="../styles/sighin.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+  <link rel="shortcut icon" href="../images/kall-logo.ico" type="image/x-icon">
+
+  <title>아이디 찾기 | KALL</title>
+
+  <style>
+    main {
+      margin: 150px auto;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1 class="title-logo">
+      <span>KALL</span>
+      <a href="../index.html">
+        <img src="../images/kall-logo.png" alt="KALL 로고">
+      </a>
+    </h1>
+
+    <nav>
+      <ul class="main-nav">
+        <li>
+          <a href="../product/">주문제작</a>
+        </li>
+        <li>
+          <a href="../design/">디자인</a>
+        </li>
+        <li>
+          <a href="../etc/">ETC</a>
+        </li>
+        <li>
+          <a href="../community/guide/">커뮤니티</a>
+        </li>
+      </ul>
+    </nav>
+
+    <input type="search" name="keyword" placeholder="검색어를 입력하세요">
+    <ul class="user-menu">
+      <li>
+        <a href="../sighin/" title="로그인">
+          <span class="visually-hidden">로그인</span>
+          <i class="fas fa-key"></i>
+        </a>
+      </li>
+      <li>
+        <a href="../sighup/" title="회원가입">
+          <span class="visually-hidden">회원가입</span>
+          <i class="fas fa-user-plus"></i>
+        </a>
+      </li>
+      <li>
+        <a href="../cart/" title="장바구니">
+          <span class="visually-hidden">장바구니</span>
+          <i class="fas fa-shopping-cart"></i>
+        </a>
+      </li>
+    </ul>
+  </header>
+
+  <main></main>
+  <!-- <main>
+    <h2>아이디 찾기</h2>
+    <p>아이디 찾는 방법을 선택해 주세요</p>
+    <form action="#" name="customer_id_find_email">
+      <input type="radio" id="email_confirm" name="ID_confirm" checked hidden>
+      <label for="email_confirm">본인 확인 이메일로 인증</label>
+      <input type="radio" id="phone_confirm" name="ID_confirm" hidden>
+      <label for="phone_confirm">등록된 휴대전화로 인증</label>
+
+      <div class="ID_email_confirm">
+        <div>
+          <label for="user-name">이름</label>
+          <input type="text" id="user-name" name="customer_name" required>
+          <label for="user-email">이메일</label>
+          <input type="email" id="user-email" name="customer_email" required>
+        </div>
+      </div>
+
+      <div class="ID_phone_confirm">
+        <div>
+          <label for="name_ID_phone">이름 </label>
+          <input type="text" name="customer_name" required>
+
+          <label for="phone">휴대폰 번호</label>
+          <div class="phone">
+            <input type="text" name="phoneNum[]" value="010" size="1" readonly required>
+            <span>-</span>
+            <input type="text" name="phoneNum[]" id="phone" maxlength=4 size="1" required>
+            <span>-</span>
+            <input type="text" name="phoneNum[]" maxlength=4 size="1" required>
+          </div>
+        </div>
+      </div>
+
+      <button class="ID_find_submit" type="submit">아이디 찾기</button>
+    </form>
+  </main> -->
+
+  <footer>
+    <div class="links">
+      <a href="../agreement">이용약관</a>
+      <span>|</span><a href="../privacy">개인정보처리방침</a>
+      <span>|</span><a href="../community/guide/">고객센터</a>
+    </div>
+    <address class="site-address">
+      <p>
+        <small>
+          안내전화: 1588-9780
+          <span>|</span> 상호 : KALL
+        </small>
+      </p>
+    </address>
+    <div class="site-info">
+      <p>
+        <small>
+          사업장소재지 : 경기 성남시 분당구 돌마로 46 (광천빌딩 5층)
+        </small>
+      </p>
+      <p>
+        <small>
+          사업자등록번호 : 214-86-26812
+          <span>|</span> 대표이사: 김상곤
+        </small>
+      </p>
+      <p>
+        <small>
+          COPYRIGHT <i class="far fa-copyright"></i> KALL. ALL RIGHTS RESERVED.
+        </small>
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+/* ==================== 아이디 찾기 ==================== */
+main p {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+form {
+  text-align: center;
+}
+
+div.tab-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+div.tab-buttons button,
+form button {
+  all: unset;
+  background-color: var(--c-point);
+  color: var(--black-3);
+  text-align: center;
+  padding: 20px 10px;
+  flex: 1;
+  cursor: pointer;
+}
+
+div.tab-buttons button:hover,
+form button:hover {
+  background-color: var(--c-point-h);
+  color: var(--white-f);
+}
+
+div.tab-buttons button.selected {
+  background-color: var(--c-point-h);
+  color: var(--white-f);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+div.input-block {
+  display: flex;
+  gap: 10px;
+}
+
+div.input-block label {
+  flex-basis: 120px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+
+div.input-block input {
+  all: unset;
+  flex: 1;
+  background-color: var(--white-f9);
+  padding: 10px;
+  text-align: left;
+}
+
+div.input-block input:focus {
+  border-bottom: 2px solid var(--c-point-h);
+}
+
+form button {
+  margin-top: 10px;
+}

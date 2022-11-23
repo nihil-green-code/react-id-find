@@ -1,0 +1,337 @@
+/* ==================== 로그인 ==================== */
+main {
+  width: 600px;
+  font-size: 1.2rem;
+}
+
+main h2 {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #333333;
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: left;
+  color: var(--black-3);
+}
+
+/* 기본 설정 */
+
+.login_page {
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.unknown_login {
+  display: none;
+}
+
+/* 밑줄 삭제 글씨 black */
+main a {
+  text-decoration: none;
+  color: var(--black-3);
+}
+
+.login_ID {
+  color: var(--black-3);
+}
+
+/* 입력 박스 관련 지정 */
+.login_ID>input,
+.login_password>input,
+.unknown_login_orderNum>input,
+.unknown_login_email>input,
+.unknown_login_phone_number>input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  font-size: 1.2rem;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  color: var(--black-3);
+  background-color: var(--white-f9);
+}
+
+.login_ID>input:focus,
+.login_password>input:focus,
+.unknown_login_orderNum>input:focus,
+.unknown_login_email>input:focus,
+.unknown_login_phone_number>input:focus {
+  border-bottom: 2px solid var(--c-point-h);
+  outline: none;
+}
+
+.login_submit,
+.find_unknown_order,
+.order_submit {
+  display: block;
+  width: 100%;
+  padding: 20px 10px;
+  font-size: 1.2rem;
+  box-sizing: border-box;
+  border: none;
+  margin-bottom: 10px;
+  background-color: var(--c-point);
+  color: var(--black-3);
+  cursor: pointer;
+}
+
+/* 비회원 주문조회 버튼 */
+section input+.find_unknown_order:hover {
+  background-color: var(--c-point-h);
+  color: var(--white-f);
+}
+
+section input:checked+.find_unknown_order {
+  margin-bottom: 30px;
+}
+
+section input:checked+.find_unknown_order+.unknown_login {
+  display: block;
+}
+
+/* 비회원 주문조회 버튼 */
+
+button:hover {
+  background-color: var(--c-point-h);
+  color: var(--white-f);
+}
+
+.save_ID {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.save_ID>label:nth-child(1) {
+  margin-right: 10px;
+}
+
+.find_info {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 50px;
+}
+
+.find_info>a {
+  text-decoration: underline;
+  color: var(--c-link);
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.find_info>a:hover {
+  color: var(--c-link-h);
+}
+
+.join_sns {
+  margin-bottom: 30px;
+}
+
+.join_sns h3 {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #333333;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-align: left;
+  color: var(--black-3);
+}
+
+.join_sns a {
+  background-color: #FAE100;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 10px;
+  font-size: 1.2rem;
+  color: #371D1E;
+  gap: 5px;
+}
+
+.join_sns a::before {
+  content: '';
+  display: inline-block;
+  background: url(../images/kakao.svg) 0/100% 100%;
+  width: 25px;
+  height: 25px;
+  filter: invert(12%) sepia(7%) saturate(3183%) hue-rotate(308deg) brightness(99%) contrast(97%);
+}
+
+/* invert(12%) sepia(7%) saturate(3183%) hue-rotate(308deg) brightness(99%) contrast(97%) */
+
+.join_sns a:hover {
+  background-color: #e7d000;
+}
+
+.login-question {
+  margin-bottom: 30px;
+}
+
+.login-question a {
+  color: var(--c-link);
+  text-decoration: underline;
+}
+
+.login-question a:hover {
+  color: var(--c-link-h);
+}
+
+/* ==================== 로그인 종료 ==================== */
+
+/* ==================== 아이디 찾기 ==================== */
+main p {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+form {
+  text-align: center;
+}
+
+form input[type="radio"]+label {
+  background-color: var(--white-e);
+  color: var(--black-3);
+  padding: 10px;
+  display: inline-block;
+  width: 200px;
+  text-align: center;
+  cursor: pointer;
+}
+
+form input[type="radio"]+label:hover {
+  background-color: var(--white-d);
+}
+
+form input[type="radio"]+label:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+
+form input[type="radio"]:checked+label {
+  background-color: var(--c-point);
+}
+
+div.ID_email_confirm,
+div.ID_phone_confirm {
+  display: none;
+  margin-top: 15px;
+}
+
+div.ID_email_confirm>div,
+div.ID_phone_confirm>div {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: repeat(2, 1fr);
+  row-gap: 10px;
+}
+
+div.ID_email_confirm>div label,
+div.ID_phone_confirm>div label {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+div.ID_phone_confirm>div div.phone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.ID_phone_confirm>div div.phone input {
+  flex: 1;
+}
+
+div.ID_email_confirm input,
+div.ID_phone_confirm input {
+  all: unset;
+  background-color: var(--white-f9);
+  padding: 10px;
+  text-align: left;
+}
+
+button.ID_find_submit {
+  all: unset;
+  display: block;
+  margin: 25px auto 0;
+  width: 60%;
+  background-color: var(--c-point);
+  color: var(--black-3);
+  padding: 20px 10px;
+  cursor: pointer;
+}
+
+button.ID_find_submit:hover {
+  background-color: var(--c-point-h);
+  color: var(--white-f);
+}
+
+form input#email_confirm:checked+label~div.ID_email_confirm,
+form input#phone_confirm:checked+label~div.ID_phone_confirm {
+  display: block;
+}
+
+/* ==================== 비밀번호 찾기 ==================== */
+main>p:nth-of-type(2) {
+  margin-top: 25px;
+}
+
+p>a {
+  color: var(--c-link);
+  text-decoration: underline;
+}
+
+p>a:hover {
+  color: var(--c-link-h);
+}
+
+form[name="customer_password_find_ID"] {
+  display: grid;
+  gap: 10px;
+}
+
+form[name="customer_password_find_ID"] input,
+form[name="customer_password_find_ID"] button,
+main button.re-pass-button,
+main input.re-pass,
+main input.re-passcheck {
+  all: unset;
+}
+
+form[name="customer_password_find_ID"] input {
+  background-color: var(--white-f9);
+  padding: 10px;
+  text-align: left;
+}
+
+form[name="customer_password_find_ID"] button,
+main button.re-pass-button {
+  padding: 20px 10px;
+  background-color: var(--c-point);
+  color: var(--black-3);
+  cursor: pointer;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+form[name="customer_password_find_ID"] button:hover,
+main button.re-pass-button:hover {
+  background-color: var(--c-point-h);
+  color: var(--white-f);
+}
+
+main input.re-pass,
+main input.re-passcheck {
+  background-color: var(--white-f9);
+  width: 100%;
+  padding: 10px;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+main form.re-pass-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
