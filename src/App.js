@@ -30,7 +30,7 @@ function App() {
   const onSubmitForm = (e) => {
     e.preventDefault();
 
-    const filteredUser = userInfo.filter((item) => item.name === name.value);
+    const filteredUser = userInfo.filter((item) => item.name === name);
 
     if (filteredUser.length === 0) {
       alert('입력하신 이름과 일치하는 회원정보가 없습니다. 다시 확인해주세요.');
@@ -40,9 +40,9 @@ function App() {
     const [user] = filteredUser;
 
     if (tabName === 'email') {
-      confirmInfo(email.value, user);
+      confirmInfo(email, user);
     } else {
-      confirmInfo(phoneNumber.value, user);
+      confirmInfo(phoneNumber, user);
     }
   };
 
